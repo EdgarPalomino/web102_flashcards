@@ -1,0 +1,52 @@
+#root {
+  margin: 2rem;
+  font-family: "Comic Sans MS";
+}
+
+.Header {
+  width: 750px;
+  margin-bottom: 50px;
+}
+
+.Flashcard {
+  height: 250px;
+  perspective: 1000px;
+}
+
+.information {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.75s;
+  transform-style: preserve-3d;
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2.5px solid cadetblue;
+  border-radius: 25px;
+  backface-visibility: hidden;
+}
+
+.Flashcard:hover .information {
+  transform: rotateX(180deg);
+}
+
+.back {
+  transform: rotateX(180deg);
+}
+
+.calculus {
+  background-color: lightblue;
+}
+
+.linear-algebra {
+  background-color: lightgreen;
+}
+
+@media only screen and (max-width: 750px) {
+  .Header {
+    width: 100%;
+  }
+}
